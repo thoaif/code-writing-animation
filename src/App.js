@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import brace from "brace";
 import {split as SplitEditor} from 'react-ace';
 import "brace/mode/python";
-import "brace/theme/monokai";
+import "brace/theme/xcode";
 
 const buttonStyles = {
     borderRadius: 10,
@@ -16,6 +16,8 @@ const buttonStyles = {
     border: 'none',
     margin: 10
 };
+
+const DELAY = 100;
 
 const StartButton = ({handleStart}) =>
     <button style={{...buttonStyles}} onClick={handleStart}>
@@ -79,7 +81,7 @@ class App extends Component {
                     }
                 });
 
-            }, 50)
+            }, DELAY)
         });
     };
 
@@ -104,11 +106,11 @@ class App extends Component {
                     <SplitEditor
                         placeholder="Placeholder Text"
                         mode="python"
-                        theme="monokai"
+                        theme="xcode"
                         name="hello"
                         onLoad={this.onLoad}
                         onChange={this.onChange}
-                        fontSize={24}
+                        fontSize={20}
                         showPrintMargin={true}
                         showGutter={true}
                         splits={2}
@@ -118,7 +120,7 @@ class App extends Component {
                             enableBasicAutocompletion: false,
                             enableLiveAutocompletion: false,
                             enableSnippets: false,
-                            showLineNumbers: true,
+                            showLineNumbers: false,
                             tabSize: 2
                         }}
                         style={{height: '100vh', width: '100vw'}}
