@@ -5,7 +5,7 @@ A simple tool to create animated and syntax highlighted code.
 
 ## [Demo](https://code-animator.netlify.com/)
 
-![demo image](demo.png)
+![demo image](demo.gif)
 
 ## Features
 - upload code
