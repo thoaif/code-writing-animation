@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import brace from "brace";
 import {split as SplitEditor} from 'react-ace';
 import "brace/mode/python";
 import "brace/theme/xcode";
